@@ -1,4 +1,4 @@
-# SECCIÓN 1: Bases de React ⚛️
+# SECCIÓN 1: Bases de React
 
 ## ¿Qué es React?
 
