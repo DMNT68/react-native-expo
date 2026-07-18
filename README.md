@@ -1,4 +1,4 @@
-# 🚀 React Native con Expo
+# ⚛️ React Native con Expo
 
 [![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactnative.dev/)
 [![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)](https://expo.dev/)
@@ -11,4 +11,4 @@ Este repositorio contiene el código y los recursos desarrollados durante el cur
 
 ## Contenido
 
-1. [Bases](./01-bases)
+1. [Bases de React](./01-bases)
