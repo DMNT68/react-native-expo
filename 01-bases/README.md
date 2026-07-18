@@ -10,7 +10,7 @@ Consulta la [documentación oficial de React](https://react.dev/es) para más in
 
 <br>
 
-# 1. Estructura de un proyecto de React ⚛️
+# 1. Estructura de un proyecto de React
 
 Un proyecto típico de React (con Vite) tiene la siguiente estructura de carpetas y archivos principales:
 
