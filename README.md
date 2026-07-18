@@ -11,4 +11,4 @@ Este repositorio contiene el código y los recursos desarrollados durante el cur
 
 ## Contenido
 
-1. [Bases de React](./01-bases)
+1. [Bases de React](./01-bases#sección-1-bases-de-react)
