@@ -6,7 +6,7 @@ React es una librería de JavaScript desarrollada por Facebook para construir in
 
 React es declarativo, lo que significa que describes cómo debería verse la interfaz y React se encarga de actualizar el DOM automáticamente cuando los datos cambian. También es basado en componentes, permitiendo crear componentes reutilizables que manejan su propio estado y lógica.
 
-Consulta la [documentación oficial de React](https://react.dev/es) para más información.
+Consulta la [documentación oficial de React](https://react.dev/learn) para más información.
 
 <br>
 
