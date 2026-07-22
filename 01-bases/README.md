@@ -63,3 +63,34 @@ TypeScript proporciona varios tipos de datos fundamentales para asegurar la segu
 - **arrays**: Representa colecciones de elementos del mismo tipo. Ejemplo: `string[]` para un array de strings como `['Velocidad', 'Volar', 'Respirar en el agua']`
 
 Estos tipos básicos te permiten escribir código más seguro y predecible, evitando errores comunes en tiempo de compilación. TypeScript verificará automáticamente que los valores asignados coincidan con el tipo declarado, proporcionando mejor autocompletado y detección de errores en tu editor de código.
+
+## Objetos literales e interfaces
+
+En TypeScript, los objetos literales son estructuras de datos definidas directamente con llaves y propiedades, por ejemplo:
+
+```ts
+const persona = {
+  nombre: 'Ana',
+  edad: 28,
+  activo: true,
+};
+```
+
+Las interfaces permiten describir la forma de un objeto de manera explícita y reutilizable. Con ellas se definen las propiedades y sus tipos, lo que ayuda a evitar errores y mantener el código más claro:
+
+```ts
+interface Usuario {
+  nombre: string;
+  edad: number;
+  activo: boolean;
+}
+
+const usuario: Usuario = {
+  nombre: 'Ana',
+  edad: 28,
+  activo: true,
+};
+```
+
+Usar interfaces con objetos literales ofrece ventajas como autocompletado, validación de tipos y mayor mantenimiento cuando se trabaja con estructuras de datos complejas.
+
