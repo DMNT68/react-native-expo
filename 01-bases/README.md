@@ -55,8 +55,6 @@ Explicación de cada archivo y directorio:
 
 TypeScript es un superset de JavaScript que añade tipado estático opcional y herramientas de comprobación en tiempo de desarrollo. Al usar TypeScript con React se obtiene mayor seguridad de tipos en componentes, props y estados, mejor autocompletado en el editor y detección temprana de errores. Esto facilita el mantenimiento y escalabilidad de aplicaciones React, especialmente en proyectos grandes o colaborativos.
 
-
-
 ## Tipos de datos básicos
 
 TypeScript proporciona varios tipos de datos fundamentales para asegurar la seguridad de tipos en tus aplicaciones:
@@ -120,6 +118,39 @@ addTwoNumbers('1', 2); // Error: el argumento debe ser number, no string
 
 Las funciones tipadas son especialmente útiles en componentes React, donde se pueden reutilizar en diferentes contextos con la seguridad de que los datos serán del tipo correcto.
 
+# 3. Hook - useState
+`useState` es un hook que permite añadir estado local a componentes funcionales. Acepta el valor inicial y devuelve un par: el valor actual y una función para actualizarlo. A continuación un ejemplo y una breve explicación de cómo tiparlo con genéricos:
+
+```tsx
+import { useState } from 'react';
+
+export const Counter = () => {
+  // Se usa el genérico <number> para indicar que el estado 'count' es de tipo number
+  const [count, setCount] = useState<number>(0);
+
+  const increaseBy = (value: number) => {
+    setCount(count + value);
+  };
+
+  return (
+    <>
+      <h3>
+        Contador: <small>{count}</small>
+      </h3>
+      <div>
+        <button onClick={() => increaseBy(-1)}>-1</button>
+        &nbsp;
+        <button onClick={() => increaseBy(1)}>+1</button>
+      </div>
+    </>
+  );
+};
+```
+
+Puntos clave:
+- El genérico de useState (<T>) fuerza el tipo del estado; aquí useState<number>(0) asegura que count sea number.
+- setCount acepta sólo valores compatibles con el tipo declarado (number), evitando errores en tiempo de compilación.
+- También se puede inicializar con null y combinar con unión de tipos: useState<MyType | null>(null) cuando el estado puede ser nulo.
 
 
 
