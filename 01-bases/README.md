@@ -51,9 +51,13 @@ Explicación de cada archivo y directorio:
 - **.gitignore**: Lista de archivos y carpetas que Git debe ignorar.
 - **eslint.config.js**: Configuración de ESLint para linting del código.
 
-# 2. Tipos de datos en TypeScript
+# 2. TypeScript
 
-## Tipos de datos basicos
+TypeScript es un superset de JavaScript que añade tipado estático opcional y herramientas de comprobación en tiempo de desarrollo. Al usar TypeScript con React se obtiene mayor seguridad de tipos en componentes, props y estados, mejor autocompletado en el editor y detección temprana de errores. Esto facilita el mantenimiento y escalabilidad de aplicaciones React, especialmente en proyectos grandes o colaborativos.
+
+
+
+## Tipos de datos básicos
 
 TypeScript proporciona varios tipos de datos fundamentales para asegurar la seguridad de tipos en tus aplicaciones:
 
@@ -93,4 +97,30 @@ const usuario: Usuario = {
 ```
 
 Usar interfaces con objetos literales ofrece ventajas como autocompletado, validación de tipos y mayor mantenimiento cuando se trabaja con estructuras de datos complejas.
+
+## Funciones, retorno y argumentos
+En TypeScript, las funciones son bloques de código reutilizables que permiten organizar la lógica de una aplicación. Una función puede recibir datos mediante argumentos y, opcionalmente, devolver un resultado mediante un retorno. Las funciones pueden tiparse explícitamente especificando los tipos de sus argumentos y el tipo del valor retornado. Esto mejora la seguridad y claridad del código:
+
+```ts
+const addTwoNumbers = (a: number, b: number): number => {
+    return a + b;
+};
+```
+
+En este ejemplo:
+- **Argumentos**: `a` y `b` son de tipo `number`, lo que asegura que solo se puedan pasar números.
+- **Tipo de retorno**: `: number` indica que la función siempre retorna un número.
+
+Esta tipificación permite que TypeScript valide que los argumentos pasados sean correctos y que el retorno sea del tipo esperado. Al llamar la función, obtenemos autocompletado y validación de tipos:
+
+```ts
+addTwoNumbers(1, 2); // Correcto, retorna 3
+addTwoNumbers('1', 2); // Error: el argumento debe ser number, no string
+```
+
+Las funciones tipadas son especialmente útiles en componentes React, donde se pueden reutilizar en diferentes contextos con la seguridad de que los datos serán del tipo correcto.
+
+
+
+
 
